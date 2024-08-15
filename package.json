@@ -68,6 +68,7 @@
   },
   "clean-publish": {
     "files": [
+      ".github",
       ".eslintrc",
       ".gitignore",
       ".npmrc",
