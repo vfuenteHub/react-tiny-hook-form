@@ -52,7 +52,9 @@ function App() {
             onChange={validate}
           />
 
-          {errors[INPUT_NAME] && <p id={hintId}>{errors[INPUT_NAME]}</p>}
+          <div id={hintId}>
+            {errors[INPUT_NAME] && <p>{errors[INPUT_NAME]}</p>}
+          </div>
         </div>
       </fieldset>
 
