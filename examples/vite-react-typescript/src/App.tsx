@@ -1,14 +1,3 @@
-# React Tiny Hook Form
-
-## Install
-
-```shell
-npm i react-tiny-hook-form
-```
-
-## Quickstart
-
-```jsx
 import { useCallback, useId } from 'react';
 import { useForm, ValidityStatesEnum } from 'react-tiny-hook-form';
 
@@ -58,9 +47,7 @@ function App() {
         </div>
       </fieldset>
 
-      <button type="submit">
-        Submit
-      </button>
+      <button type="submit">Submit</button>
 
       <button type="button" onClick={onSetError}>
         Set "{INPUT_ERROR}" error at "{INPUT_NAME}" field
@@ -76,4 +63,3 @@ function App() {
 }
 
 export default App;
-```
