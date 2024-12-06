@@ -1,6 +1,6 @@
 {
   "name": "react-tiny-hook-form",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "type": "module",
   "description": "A tiny forms library for React Hooks",
   "keywords": [
@@ -36,7 +36,7 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "publish": "rimraf --glob dist && vite build --mode development; vite build --mode production && clean-publish"
+    "prepublishOnly": "rimraf --glob dist && vite build --mode development; vite build --mode production && clean-publish"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.1",
@@ -84,6 +84,7 @@
       "type",
       "scripts"
     ],
-    "cleanDocs": true
+    "cleanDocs": true,
+    "packageManager": "npm"
   }
 }
