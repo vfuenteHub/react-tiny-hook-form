@@ -676,6 +676,3 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/git,node,test,linux,macos,react,direnv,eclipse,windows,intellij,phpstorm,webstorm,visualstudiocode
-
-# Custom
-/package
