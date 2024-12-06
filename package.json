@@ -1,6 +1,7 @@
 {
   "name": "react-tiny-hook-form",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "type": "module",
   "description": "A tiny forms library for React Hooks",
   "keywords": [
     "react",
@@ -17,11 +18,11 @@
   ],
   "main": "./index.js",
   "module": "./index.node.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "default": "./index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/types/index.d.ts",
+      "default": "./index.js"
     }
   },
   "repository": {
@@ -35,28 +36,28 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "publish": "rimraf --glob dist && tsc && vite build --mode development; vite build --mode production && clean-publish",
+    "publish": "rimraf --glob dist && vite build --mode development; vite build --mode production && clean-publish",
     "clean": "rimraf --glob dist node_modules package-lock.json yarn.lock"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-commonjs": "^28.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/node": "^22.2.0",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "@typescript-eslint/eslint-plugin": "^8.1.0",
     "@typescript-eslint/parser": "^8.1.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "clean-publish": "^5.0.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.16.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.34.4",
-    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.8",
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
     "typescript": "^5.2.2",
-    "vite": "^5.3.1",
+    "vite": "^6.0.3",
     "vite-plugin-dts": "^4.0.2"
   },
   "peerDependencies": {
@@ -81,8 +82,8 @@
       "vite.config.mts"
     ],
     "fields": [
-      "scripts",
-      "devDependencies"
+      "type",
+      "scripts"
     ],
     "cleanDocs": true
   }
