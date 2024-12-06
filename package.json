@@ -36,8 +36,9 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "publish": "rimraf --glob dist && vite build --mode development; vite build --mode production && clean-publish",
-    "clean": "rimraf --glob dist node_modules package-lock.json yarn.lock"
+    "prepublishOnly": "rimraf --glob dist package && vite build --mode development; vite build --mode production && clean-publish",
+    "postpublish": "rimraf --glob package",
+    "clean": "rimraf --glob dist package node_modules package-lock.json yarn.lock"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.1",
@@ -68,7 +69,12 @@
       "optional": true
     }
   },
+  "publishConfig": {
+    "directory": "package"
+  },
   "clean-publish": {
+    "withoutPublish": true,
+    "tempDir": "package",
     "files": [
       "examples",
       ".github",
